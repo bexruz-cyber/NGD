@@ -262,10 +262,12 @@ button {
     font-weight: 700;
     font-size: 17px;
 }
-.contact__submit-wrapper{
+
+.contact__submit-wrapper {
     display: flex;
     justify-content: center;
 }
+
 .contact__submit {
     color: black;
     font-weight: 400;
@@ -274,6 +276,64 @@ button {
     background-color: #fff;
     border-radius: 9999px;
     box-shadow: 0px 1px 2px 0px #0000000D;
+}
+
+.footer {
+    padding-top: 40px;
+    background-color: #1C2D55;
+}
+
+.footer__container {
+    max-width: 1280px;
+    padding: 0 clamp(40px, 3vw, 32px);
+    margin: 0 auto;
+}
+
+.footer__top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+    gap: 48px;
+    padding-bottom: 44px;
+    border-bottom: 1px solid #354669;
+}
+
+.footer__contacts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 36px;
+    max-width: 782px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.footer__contact-title {
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 22px;
+}
+
+.footer__contact-link {
+    color: white;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.footer__contact-link:hover {
+    text-decoration: underline;
+}
+
+.footer__bottom {
+    padding: 13px;
+}
+
+.footer__copyright {
+    text-align: center;
+    color: #677891;
+    font-size: 15px;
 }
 
 @media (max-width: 1024px) {
@@ -295,5 +355,16 @@ button {
 @media (max-width: 480px) {
     .partners__list {
         --scroll-duration: 6s;
+    }
+}
+
+@media (max-width: 389px) {
+    .tariff__card-button{
+        font-size: 18px;
+        padding: 18px 38px;
+    }
+    .contact__submit{
+        font-size: 14px;
+        padding: 19px 40px;
     }
 }
