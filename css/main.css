@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+ul,
+li,
+ol,
+button,
+a {
+    background-color: transparent;
+    border: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+.tariff {
+    padding: 80px 0;
+}
+
+.tariff__container {
+    max-width: 1280px;
+    padding: 0 16px;
+    margin: 0 auto;
+}
+
+.tariff__title {
+    color: #0A0A0A;
+    font-weight: 700;
+    font-size: clamp(29px, 3vw, 35px);
+    line-height: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 80px;
+
+    span {
+        color: #00A6F4;
+    }
+}
+
+.tariff__cards {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 32px;
+    margin-bottom: 80px;
+}
+
+.tariff__card {
+    max-width: 384px;
+    width: 100%;
+    box-shadow: 0px 1px 2px -1px #0000001A,
+        0px 1px 3px 0px #0000001A;
+    border: 1px solid #E5E5E5B2;
+    padding: 33px;
+    min-height: 550px;
+    border-radius: 16px;
+    margin: 0 auto;
+}
+
+.tariff__card.tariff__card--standart {
+    border: 2px solid #1C2D55;
+    box-shadow: 0px 1px 2px -1px #0000001A,
+        0px 1px 3px 0px #0000001A;
+    position: relative;
+}
+
+.tariff__card--head {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 9px;
+    color: white;
+    font-size: 11px;
+    line-height: 16px;
+    background-color: #1C2D55;
+    box-shadow: 0px 1px 2px -1px #0000001A,
+        0px 1px 3px 0px #0000001A;
+    display: inline-flex;
+    border-radius: 8px;
+}
+
+.tariff__card-label {
+    color: #00A6F4;
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 32px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.tariff__card-price {
+    color: #1C2D55;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.9px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.tariff__card-subtitle {
+    color: #00A6F4;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.tariff__card-features {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.tariff__card-feature {
+    display: flex;
+    align-items: start;
+    gap: 6px;
+    color: #354669;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.tariff__card-feature-icon {
+    display: flex;
+}
+
+.tariff__card-actions {
+    display: flex;
+    justify-content: center;
+}
+
+.tariff__card-button {
+    color: white;
+    font-size: 22px;
+    line-height: 32px;
+    padding: 24px 43px;
+    background-color: #003366;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+    border-radius: 9999px;
+}
+
+.partners__container {
+    max-width: 1280px;
+    padding: 0 16px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+.partners__title {
+    color: #1C2D55;
+    font-weight: 700;
+    font-size: 29px;
+    line-height: 36px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.partners__list {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    white-space: nowrap;
+}
+
+.partners__logo {
+    width: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+/* Animatsiya — 12-15s ichida to‘liq aylanadi */
+.partners__list {
+    animation: infiniteScroll var(--scroll-duration, 12s) linear infinite;
+}
+
+@keyframes infiniteScroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.partners__list:hover {
+    animation-play-state: paused;
+}
+
+.contact {
+    padding: 80px 0;
+}
+
+.contact__container {
+    max-width: 1280px;
+    padding: 0 16px;
+    margin: 0 auto;
+}
+
+.contact__title {
+    color: #1C2D55;
+    font-weight: 700;
+    font-size: clamp(29px, 3vw, 36px);
+    line-height: clamp(36px, 3vw, 40px);
+    text-align: center;
+    max-width: 728px;
+    margin: 0 auto 66px;
+}
+
+.contact__form-wrapper {
+    max-width: 832px;
+    width: 100%;
+    background-color: #1C2D55;
+    padding: 32px;
+    border-radius: 14px;
+    box-shadow: 0px 8px 10px -6px #0000001A, 0px 20px 25px -5px #0000001A;
+    margin: 0 auto;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.contact__input {
+    width: 100%;
+    padding: 18px 13px;
+    background-color: #fff;
+    border: 1px solid white;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+    border-radius: 9999px;
+    outline: none;
+    font-weight: 700;
+    font-size: 17px;
+    color: black;
+}
+
+.contact__input::placeholder {
+    color: #737373;
+    font-weight: 700;
+    font-size: 17px;
+}
+.contact__submit-wrapper{
+    display: flex;
+    justify-content: center;
+}
+.contact__submit {
+    color: black;
+    font-weight: 400;
+    font-size: 17px;
+    padding: 19px 47px;
+    background-color: #fff;
+    border-radius: 9999px;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+}
+
+@media (max-width: 1024px) {
+    .tariff__cards {
+        flex-wrap: wrap;
+    }
+
+    .partners__list {
+        --scroll-duration: 11s;
+    }
+}
+
+@media (max-width: 768px) {
+    .partners__list {
+        --scroll-duration: 10s;
+    }
+}
+
+@media (max-width: 480px) {
+    .partners__list {
+        --scroll-duration: 6s;
+    }
+}
